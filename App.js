@@ -19,8 +19,10 @@ export default function App() {
 
             if (route.name ==="Home") {
               iconName = "home";
-            } else if (route.name === "Settings") {
+            } else if (route.name === "Event") {
               iconName = "list";
+            } else if (route.name === "Contact") {
+              iconName = focused ? "user" : "user-o";
             }
 
             return <FontAwesome name={iconName} size={size} color={color} />;
@@ -30,7 +32,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Events" component={EventScreen} />
+        <Tab.Screen name="Event" component={EventScreen} />
         <Tab.Screen name="Contact" component={ContactScreen} />
       </Tab.Navigator>
     </NavigationContainer>
